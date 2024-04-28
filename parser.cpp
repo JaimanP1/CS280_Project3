@@ -5,7 +5,7 @@
  * Spring 2024
 */
 
-#include "parser.h"
+#include "parserInterp.h"
 
 map<string, bool> defVar;
 map<string, Token> SymTable;
