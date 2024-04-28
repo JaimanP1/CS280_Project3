@@ -368,8 +368,6 @@ bool VarList(istream& in, int& line) {
 	return status;
 	
 }//End of VarList
-	
-
 
 //PrintStmt:= PRINT *, ExpreList 
 bool PrintStmt(istream& in, int& line) {
