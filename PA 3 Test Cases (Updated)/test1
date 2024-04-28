@@ -1,0 +1,8 @@
+PROGRAM circle
+	!Testing initialization of variables
+	real :: r=5, a, p, b 	
+	character :: str1="H", str2="World"
+	 
+	print *, str1, " ", str2, " ", r
+	
+END PROGRAM circle

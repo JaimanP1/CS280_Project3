@@ -1,0 +1,9 @@
+PROGRAM circle
+	!Illegal operand type for SIGN operator
+	real :: r=5, a, p = 2, b = -3	
+	character :: str1, str2
+	a = r * p
+	str1 = - str2
+	print *, r, a
+	
+END PROGRAM circle

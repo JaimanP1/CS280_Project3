@@ -1,0 +1,15 @@
+PROGRAM circle
+	!Incorrect Initialization of a String Length
+	CHARACTER (LEN = 2.5):: str
+	REAL :: r, a, p
+	integer:: b = 2	
+	
+	
+	r = 3
+	a = (3.14) * r * r
+	IF ( r > b) 
+	  p = 2 * 3.14 * b 
+	  
+	print *, str, " ", p, " ", a
+	
+END PROGRAM circle

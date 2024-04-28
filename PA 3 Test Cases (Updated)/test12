@@ -1,0 +1,11 @@
+PROGRAM circle
+	!Illegal operand type for the operation
+	real :: r = 10, a = 0	
+	character :: str
+	str = "Goodbye"
+	
+	r = r + str
+	!Display the results
+	PRINT *, "The output results are: " , r , ", ", str
+	
+END PROGRAM circle

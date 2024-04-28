@@ -1,0 +1,14 @@
+PROGRAM circle
+	!Illegal operand type for a relational operator
+	REAL :: r, a, p
+	integer:: b = 2	
+	CHARACTER (LEN = 4):: str
+	
+	r = 3
+	a = (3.14) * r * r
+	IF ( r > str) 
+	  p = 2 * 3.14 * b 
+	  
+	print *, str, " ", p, " ", a
+	
+END PROGRAM circle

@@ -1,0 +1,11 @@
+PROGRAM circle
+	!Testing Block-If Then-clause and string initialization
+	REAL :: r=3, a, p, b =2	
+	character (LEN = 20) :: str1 = "Hello World!", str2
+	a = (3.14) * r * r
+	IF ( r == 3) THEN
+	  p = 2 * 3.14 * b 
+	END IF
+	PRINT *, "Results: ", r, " ", b, " ", a, " ", p
+	print *, str1, "str2: ", str2, r
+END PROGRAM circle

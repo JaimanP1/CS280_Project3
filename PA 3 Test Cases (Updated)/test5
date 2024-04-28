@@ -1,0 +1,18 @@
+PROGRAM circle
+	!Testing string catenation
+	REAL :: r, a, p, b =2
+	character (LEN = 15) :: str1 = "Hello ", str2 = "World!"
+	character (LEN = 32):: str
+	r = 3
+	a = (3.14) * r * r
+	IF ( r == 5) THEN
+	  IF ( r == 5) THEN
+	  p = 2 * 3.14 * b 
+	  print *, a, p, r
+	else
+		str = str1  // str2// "?"
+		print *, str, " ", b
+	END IF 
+	
+	
+END PROGRAM circle

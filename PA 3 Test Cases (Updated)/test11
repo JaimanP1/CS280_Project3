@@ -1,0 +1,9 @@
+PROGRAM circle
+	!Illegal mixed-mode assignment operation
+	real :: r = 10, a = 0	
+	character :: str
+	str = r 
+	!Display the results
+	PRINT *, "The output results are: " , a, ", ", r , ", ", str
+	
+END PROGRAM circle

@@ -1,0 +1,7 @@
+PROGRAM circle
+	!Testing evaluation of expressions
+	INTEGER :: r, a = 5, p = 2, b=3 	
+	
+	!Display the results
+	PRINT *, "The output results are: " , a+4, ", ", p*2, ", ", -b
+END PROGRAM circle

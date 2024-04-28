@@ -1,0 +1,8 @@
+PROGRAM circle
+	!Testing division by zero
+	real :: r = 10, a = 0, p 	
+	
+	p = r / a
+	PRINT *, "The output results are: " , a, ", ", p , ", ", r
+	
+END PROGRAM circle
