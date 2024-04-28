@@ -559,7 +559,7 @@ bool ExprList(istream& in, int& line) {
 	bool status = false;
 	Value retVal;
 	
-	status = Expr(in, line);
+	status = Expr(in, line, retVal);
 	if(!status){
 		ParseError(line, "Missing Expression");
 		return false;

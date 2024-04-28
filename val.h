@@ -33,7 +33,7 @@ public:
     
     ValType GetType() const { return T; }
     bool IsErr() const { return T == VERR; }
-     bool IsString() const { return T == VSTRING; }
+    bool IsString() const { return T == VSTRING; }
     bool IsReal() const {return T == VREAL;}
     bool IsBool() const {return T == VBOOL;}
     bool IsInt() const { return T == VINT; }
@@ -99,8 +99,10 @@ public:
     
     //overloaded equality operator of this with op
     Value operator==(const Value& op) const;
+
 	//overloaded greater than operator of this with op
 	Value operator>(const Value& op) const;
+    
 	//overloaded less than operator of this with op
 	Value operator<(const Value& op) const;
 	
