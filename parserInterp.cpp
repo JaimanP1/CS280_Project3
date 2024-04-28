@@ -1,14 +1,17 @@
-/* Implementation of Recursive-Descent Parser
- * for the SFort95 Language
- * parser(SP24).cpp
- * Programming Assignment 2
+/* Implementation of Interpreter for the SFort95 Language
+ * parserInterp.cpp
+ * Programming Assignment 3
  * Spring 2024
 */
+#include <stack>
 
 #include "parserInterp.h"
 
 map<string, bool> defVar;
 map<string, Token> SymTable;
+
+map<string, Value> TempsResults; //Container of temporary locations of Value objects for results of expressions, variables values and constants 
+queue <Value> * ValQue; //declare a pointer variable to a queue of Value objects
 
 namespace Parser {
 	bool pushed_back = false;
@@ -372,6 +375,7 @@ bool VarList(istream& in, int& line) {
 //PrintStmt:= PRINT *, ExpreList 
 bool PrintStmt(istream& in, int& line) {
 	LexItem t;
+	ValQue = new queue<Value>;
 	
 	t = Parser::GetNextToken(in, line);
 	
@@ -394,6 +398,14 @@ bool PrintStmt(istream& in, int& line) {
 		return false;
 	}
 	
+	while (!(*ValQue).empty())
+	{
+		Value nextVal = (*ValQue).front();
+		cout << nextVal;
+		ValQue->pop();
+	}
+
+	cout << endl;
 	return ex;
 }//End of PrintStmt
 
@@ -545,6 +557,7 @@ bool AssignStmt(istream& in, int& line) {
 //ExprList:= Expr {,Expr}
 bool ExprList(istream& in, int& line) {
 	bool status = false;
+	Value retVal;
 	
 	status = Expr(in, line);
 	if(!status){
@@ -552,6 +565,7 @@ bool ExprList(istream& in, int& line) {
 		return false;
 	}
 	
+	ValQue->push(retVal);
 	LexItem tok = Parser::GetNextToken(in, line);
 	
 	if (tok == COMMA) {
