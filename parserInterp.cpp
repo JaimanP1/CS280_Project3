@@ -762,6 +762,7 @@ bool Factor(istream& in, int& line, int sign) {
 			ParseError(line, "Using Undefined Variable");
 			return false;	
 		}
+		//Value retrVal = 
 		return true;
 	}
 	else if( tok == ICONST ) {
